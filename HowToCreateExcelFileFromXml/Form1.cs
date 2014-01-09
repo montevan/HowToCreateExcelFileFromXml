@@ -32,6 +32,7 @@ namespace HowToCreateExcelFileFromXml
       // C:\Users\mvannortwick\Documents\Visual Studio 2008\Projects\howotcreateexcelfilefromxml\HowToCreateExcelFileFromXml\HowToCreateExcelFileFromXml\bin\Debug\product.xml
       // Support Document: "C:\Users\mvannortwick\Documents\Visual Studio 2008\Projects\howotcreateexcelfilefromxml\HowToCreateExcelFileFromXml\HowToCreateExcelFileFromXml\bin\Debug\product.xlsx"
 
+      //xmlFile = XmlReader.Create("Product.xml", new XmlReaderSettings());
       xmlFile = XmlReader.Create("Product.xml", new XmlReaderSettings());
       ds.ReadXml(xmlFile);
         
@@ -61,6 +62,7 @@ namespace HowToCreateExcelFileFromXml
       string strSlot_Id = ds.Tables[3].Columns[2].ColumnName;
       string strBoard1 = ds.Tables[3].Rows[0].ItemArray[1].ToString();
 
+      /*string strPosition = ds.Tables[4].TableName;*/
       string strPosition = ds.Tables[4].TableName;
       string strUnitID = ds.Tables[4].Columns["UnnnitXX1"].ColumnName;
       string strLocationID = ds.Tables[4].Columns[1].ColumnName;
@@ -111,7 +113,7 @@ namespace HowToCreateExcelFileFromXml
       releaseObject(xlWorkBook);
       releaseObject(xlWorkSheet);
 
-      MessageBox.Show("Done .. ");
+      MessageBox.Show("Done ...... ");
     }
 
     private void releaseObject(object obj)
